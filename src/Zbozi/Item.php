@@ -39,6 +39,8 @@ class Item extends BaseItem {
     protected $itemGroupId;
     /** @var string|null */
     protected $manufacturer;
+	/** @var boolean */
+	protected $erotic = false;
 
     #optional
     /** @var string|null */
@@ -595,4 +597,22 @@ class Item extends BaseItem {
         return $this->parameters;
     }
 
+	/**
+	 * @return boolean
+	 */
+	public function isErotic()
+	{
+		return $this->erotic == true;
+	}
+
+	/**
+	 * @param boolean $erotic
+	 * @return Item
+	 */
+	public function setErotic($erotic)
+	{
+		$this->erotic = $erotic == true;
+
+		return $this;
+	}
 }

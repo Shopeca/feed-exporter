@@ -16,6 +16,7 @@
     <PRODUCTNO n:if="$item->productNo">{$item->productNo}</PRODUCTNO>
     <ITEMGROUP_ID n:if="$item->itemGroupId">{$item->itemGroupId}</ITEMGROUP_ID>
     <MANUFACTURER n:if="$item->manufacturer">{$item->manufacturer}</MANUFACTURER>
+    <EROTIC n:if="$item->isErotic()">1</EROTIC>
     <BRAND n:if="$item->brand">{$item->brand}</BRAND>
     <CATEGORY_ID n:if="$item->categoryId">{$item->categoryId}</CATEGORY_ID>
 
