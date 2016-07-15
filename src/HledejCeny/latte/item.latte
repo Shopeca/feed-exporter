@@ -1,11 +1,11 @@
 {contentType xml}
 <SHOPITEM>
-    <PRODUCT>{$item->productName}</PRODUCT>
-    <URL>{$item->url}</URL>
+	<PRODUCT>{$item->product}</PRODUCT>
+	<URL>{$item->url}</URL>
 	<DESCRIPTION>{$item->description}</DESCRIPTION>
 	<PRICE_VAT>{$item->priceVat}</PRICE_VAT>
-	<IMAGE_URL>{$item->imageUrl}</IMAGE_URL>
-    <PRICE_VAT>{$item->priceVat}</PRICE_VAT>
+	<IMGURL>{$item->imgUrl}</IMGURL>
+	<PRICE_VAT>{$item->priceVat}</PRICE_VAT>
 	<DELIVERY_DATE>{$item->deliveryDate}</DELIVERY_DATE>
 
 	<MANUFACTURER n:if="$item->manufacturer">{$item->manufacturer}</MANUFACTURER>
