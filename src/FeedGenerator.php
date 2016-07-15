@@ -12,7 +12,8 @@ class FeedGenerator extends BaseGenerator {
 	 */
 	protected function getTemplate($name)
 	{
-		return __DIR__ . '/latte/' . $name . '.latte';
+		$reflectionClass = new \ReflectionClass($this);
+		return dirname($reflectionClass->getFileName()) . '/latte/' . $name . '.latte';
 	}
 
 	public function generate () {
