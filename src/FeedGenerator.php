@@ -10,10 +10,9 @@ class FeedGenerator extends BaseGenerator {
 	 * @param $name
 	 * @return string
 	 */
-	protected function getTemplate($name)
+	protected function getTemplate ($name)
 	{
-		$reflectionClass = new \ReflectionClass($this);
-		return dirname($reflectionClass->getFileName()) . '/latte/' . $name . '.latte';
+		// Should be defined in children
 	}
 
 	public function generate () {
