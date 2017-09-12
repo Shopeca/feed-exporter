@@ -30,7 +30,8 @@ class Delivery extends Object {
         TNT = 'TNT',
         TOPTRANS = 'TOPTRANS',
         UPS = 'UPS',
-        VLASTNI_PREPRAVA = 'VLASTNI_PREPRAVA';
+		VLASTNI_PREPRAVA = 'VLASTNI_PREPRAVA',
+		ZASILKOVNA = 'ZASILKOVNA';
 
     static $ids = array(
         self::CESKA_POSTA,
@@ -55,6 +56,7 @@ class Delivery extends Object {
         self::TOPTRANS,
         self::UPS,
         self::VLASTNI_PREPRAVA,
+		self::ZASILKOVNA,
     );
 
     /** @var string */
