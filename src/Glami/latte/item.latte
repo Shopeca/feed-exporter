@@ -1,0 +1,34 @@
+{contentType xml}
+<SHOPITEM>
+	<ITEM_ID>{$item->itemId}</ITEM_ID>
+	<ITEMGROUP_ID>{$item->itemGroupId}</ITEMGROUP_ID>
+	<PRODUCTNAME>{$item->name}</PRODUCTNAME>
+	<DESCRIPTION>{$item->description}</DESCRIPTION>
+	<URL>{$item->url}</URL>
+	<URL_SIZE n:if="$item->urlSize">{$item->urlSize}</URL_SIZE>
+	<IMGURL>{$item->imageUrl}</IMGURL>
+	{if !empty($images = $item->imgUrlAlternative)}
+		<IMGURL_ALTERNATIVE n:foreach="$images as $image">{$image->imgUrl}</IMGURL_ALTERNATIVE>
+	{/if}
+	<PRICE_VAT>{$item->price}</PRICE_VAT>
+	<MANUFACTURER>{$item->manufacturer}</MANUFACTURER>
+	<CATEGORYTEXT>{$item->category}</CATEGORYTEXT>
+	<CATEGORY_ID>{$item->categoryId}</CATEGORY_ID>
+	<EAN n:if="$item->ean">{$item->ean}</EAN>
+	<GLAMI_CPC n:if="$item->glamiCpc">{$item->glamiCpc}</GLAMI_CPC>
+	<PROMOTION_ID n:if="$item->promotionId">{$item->promotionId}</PROMOTION_ID>
+	<DELIVERY_DATE>{$item->deliveryDate}</DELIVERY_DATE>
+	{if !empty($deliveries = $item->delivery)}
+		<DELIVERY n:foreach="$deliveries as $delivery">
+			<DELIVERY_ID>{$delivery->name}</DELIVERY_ID>
+			<DELIVERY_PRICE>{$delivery->price}</DELIVERY_PRICE>
+			<DELIVERY_PRICE_COD>{$delivery->priceCod}</DELIVERY_PRICE_COD>
+		</DELIVERY>
+	{/if}
+	{if !empty($parameters = $item->parameters)}
+		<PARAM n:foreach="$parameters as $parameter">
+			<PARAM_NAME>{$parameter->name}</PARAM_NAME>
+			<VAL>{$parameter->value}</VAL>
+		</PARAM>
+	{/if}
+</SHOPITEM>
