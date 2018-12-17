@@ -1,0 +1,5 @@
+{contentType xml}
+<DEPOT n:ifset="$depot->id" id="{$depot->id}">
+    <STOCK_QUANTITY n:if="{$depot->stockQuantity > 0}">{$depot->stockQuantity}</STOCK_QUANTITY>
+    <PICKUP_TIME n:ifset="$depot->deadlineTime" n:if="$depot->hasValidPickupTime()" orderDeadline="{$depot->deadlineTime}">{$depot->pickupTime}</PICKUP_TIME>
+</DEPOT>

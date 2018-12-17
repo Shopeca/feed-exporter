@@ -1,0 +1,12 @@
+{contentType xml}
+<ITEM n:ifset="$item->itemId" id="{$item->itemId}">
+    <STOCK_QUANTITY n:if="{$item->stockQuantity > 0}">{$item->stockQuantity}</STOCK_QUANTITY>
+    <DELIVERY_TIME n:ifset="$item->deadlineTime" n:if="$item->hasValidDeliveryTime()" orderDeadline="{$item->deadlineTime}">{$item->deliveryTime}</DELIVERY_TIME>
+
+    {if !empty($depots = $item->getDepots()}
+        {foreach $depots as $depot}
+            {include 'depot.latte', depot => $depot}
+        {/foreach}
+    {/if}
+
+</ITEM>
