@@ -96,6 +96,10 @@ class Depot extends Object
 	 */
 	public function hasValidPickupTime()
 	{
+		if (!$this->deadlineTime instanceof \DateTime) {
+			return false;
+		}
+
 		$deadline = $this->deadlineTime->modify('+7 days');
 		return $this->pickupTime <= $deadline;
 	}

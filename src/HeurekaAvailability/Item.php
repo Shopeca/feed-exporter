@@ -121,6 +121,10 @@ class Item extends BaseItem
 	 */
 	public function hasValidDeliveryTime()
 	{
+		if (!$this->deadlineTime instanceof \DateTime) {
+			return false;
+		}
+
 		$deadline = $this->deadlineTime->modify('+7 days');
 		return $this->deliveryTime <= $deadline;
 	}
