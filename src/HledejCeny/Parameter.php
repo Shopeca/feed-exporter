@@ -1,4 +1,5 @@
 <?php
+
 namespace Shopeca\XML\Feed\HledejCeny;
 
 use Shopeca\XML\Generators\BaseParameter;
@@ -8,6 +9,7 @@ use Shopeca\XML\Generators\BaseParameter;
  * @author Tom Hnatovsky <tom@hnatovsky.cz>
  * @package Mk\Feed\Generators\HledejCeny
  */
-class Parameter extends BaseParameter {
+class Parameter extends BaseParameter
+{
 
 }
