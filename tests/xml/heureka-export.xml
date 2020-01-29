@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SHOP>
+  <SHOPITEM>
+    <ITEM_ID>1</ITEM_ID>
+    <PRODUCTNAME>Autíčko</PRODUCTNAME>
+    <DESCRIPTION>&lt;p&gt;Jezdí jako ďas&lt;/p&gt;</DESCRIPTION>
+    <URL>http://eshop.cz/auticko</URL>
+    <IMGURL>http://eshop.cz/auticko.jpg</IMGURL>
+    <IMGURL_ALTERNATIVE>http://eshop.cz/auticko2.jpg</IMGURL_ALTERNATIVE>
+    <VIDEO_URL>http://eshop.cz/auticko.mp4</VIDEO_URL>
+    <PRICE_VAT>250</PRICE_VAT>
+    <PARAM>
+      <PARAM_NAME>barva</PARAM_NAME>
+      <VAL>red</VAL>
+    </PARAM>
+    <MANUFACTURER>Matel</MANUFACTURER>
+    <CATEGORYTEXT>Hračky</CATEGORYTEXT>
+    <EAN>00012123456</EAN>
+    <ISBN>kniha0003</ISBN>
+    <HEUREKA_CPC>2</HEUREKA_CPC>
+    <DELIVERY_DATE>2020-06-01</DELIVERY_DATE>
+    <DELIVERY>
+      <DELIVERY_ID>CESKA_POSTA</DELIVERY_ID>
+      <DELIVERY_PRICE>100</DELIVERY_PRICE>
+      <DELIVERY_PRICE_COD>0</DELIVERY_PRICE_COD>
+    </DELIVERY>
+    <ITEMGROUP_ID>group10</ITEMGROUP_ID>
+    <ACCESSORY>105</ACCESSORY>
+    <DUES>10</DUES>
+    <GIFT>Klíčenka</GIFT>
+  </SHOPITEM>
+</SHOP>
