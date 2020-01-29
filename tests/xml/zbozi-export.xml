@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SHOP xmlns="http://www.zbozi.cz/ns/offer/1.0">
+  <SHOPITEM>
+    <PRODUCTNAME>Autíčko</PRODUCTNAME>
+    <DESCRIPTION>&lt;p&gt;Jezdí jako ďas&lt;/p&gt;</DESCRIPTION>
+    <URL>http://eshop.cz/auticko</URL>
+    <PRICE_VAT>250</PRICE_VAT>
+    <DELIVERY_DATE>2020-06-01</DELIVERY_DATE>
+    <ITEM_ID>1</ITEM_ID>
+    <IMGURL>http://eshop.cz/auticko.jpg</IMGURL>
+    <IMGURL>http://eshop.cz/auticko2.jpg</IMGURL>
+    <EAN>00012123456</EAN>
+    <ISBN>kniha0003</ISBN>
+    <PRODUCTNO>45455</PRODUCTNO>
+    <ITEMGROUP_ID>group10</ITEMGROUP_ID>
+    <MANUFACTURER>Matel</MANUFACTURER>
+    <BRAND>Matel</BRAND>
+    <CATEGORY_ID>Hračky</CATEGORY_ID>
+    <CATEGORYTEXT>Hračky</CATEGORYTEXT>
+    <PRODUCT>Autíčko</PRODUCT>
+    <EXTRA_MESSAGE>free_case</EXTRA_MESSAGE>
+    <SHOP_DEPOTS>112</SHOP_DEPOTS>
+    <CUSTOM_LABEL_0>Pouze u nás</CUSTOM_LABEL_0>
+    <CUSTOM_LABEL_1>Doručíme do Vánoc</CUSTOM_LABEL_1>
+    <MAX_CPC>2</MAX_CPC>
+    <MAX_CPC_SEARCH>2</MAX_CPC_SEARCH>
+    <PARAM>
+      <PARAM_NAME>barva</PARAM_NAME>
+      <VAL>red</VAL>
+    </PARAM>
+    <PRODUCT_LINE>Ghost Town</PRODUCT_LINE>
+    <LIST_PRICE>1000</LIST_PRICE>
+    <RELEASE_DATE>2020-01-01T00:00:00+00:00</RELEASE_DATE>
+  </SHOPITEM>
+</SHOP>

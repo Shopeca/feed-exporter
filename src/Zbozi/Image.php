@@ -2,26 +2,36 @@
 
 namespace Shopeca\XML\Feed\Zbozi;
 
-use Nette\Object;
+use Nette\SmartObject;
 
-class Image extends Object {
-    private $url;
+/**
+ * Class Image
+ * @package Shopeca\XML\Feed\Zbozi
+ *
+ * @property string $url
+ */
+class Image
+{
 
-    /**
-     * Image constructor.
-     * @param $url
-     */
-    public function __construct($url)
-    {
-        $this->url = $url;
-    }
+	use SmartObject;
 
-    /**
-     * @return mixed
-     */
-    public function getUrl()
-    {
-        return $this->url;
-    }
+	private $url;
+
+	/**
+	 * Image constructor.
+	 * @param $url
+	 */
+	public function __construct($url)
+	{
+		$this->url = $url;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getUrl()
+	{
+		return $this->url;
+	}
 
 }
