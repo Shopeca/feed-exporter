@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SHOP>
+  <SHOPITEM>
+    <NAME>Autíčko</NAME>
+    <DESCRIPTION>&lt;p&gt;Jezdí jako ďas&lt;/p&gt;</DESCRIPTION>
+    <PRICE>250</PRICE>
+    <CATEGORY>Hračky</CATEGORY>
+    <MANUFACTURER>Matel</MANUFACTURER>
+    <URL>http://eshop.cz/auticko</URL>
+    <PICTURE>http://eshop.cz/auticko.jpg</PICTURE>
+    <SHOPPING>100</SHOPPING>
+    <AVAILABILITY>0</AVAILABILITY>
+    <ID>1</ID>
+    <EAN>00012123456</EAN>
+    <PART_NUMBER>kniha0003</PART_NUMBER>
+    <PARAMS>
+      <PARAM>
+        <PARAM_NAME>barva</PARAM_NAME>
+        <VAL>red</VAL>
+      </PARAM>
+    </PARAMS>
+  </SHOPITEM>
+</SHOP>
