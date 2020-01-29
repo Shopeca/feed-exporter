@@ -1,9 +1,17 @@
 <?php
 namespace Shopeca\XML\Feed\Glami;
 
-use Nette\Object;
+use Nette\SmartObject;
 
-class Delivery extends Object {
+/**
+ * @property string $name
+ * @property float $price
+ * @property float $priceCod
+ */
+class Delivery
+{
+
+	use SmartObject;
 
 	/** @var string */
 	private $name;
@@ -23,28 +31,31 @@ class Delivery extends Object {
     public function __construct($name, $price, $priceCod)
     {
 	    $this->name = (string) $name;
-	    $this->priceCod = (float) $price;
+	    $this->price = (float) $price;
 	    $this->priceCod = (float) $priceCod;
     }
 
 	/**
 	 * @return string
 	 */
-	public function getName () {
+	public function getName()
+	{
 		return $this->name;
 	}
 
 	/**
 	 * @return float
 	 */
-	public function getPrice () {
+	public function getPrice()
+	{
 		return $this->price;
 	}
 
 	/**
 	 * @return float
 	 */
-	public function getPriceCod () {
+	public function getPriceCod()
+	{
 		return $this->priceCod;
 	}
 
