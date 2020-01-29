@@ -1,4 +1,5 @@
 <?php
+
 namespace Shopeca\XML\Feed\Google;
 
 use Shopeca\XML\Generators\BaseItem;
@@ -7,320 +8,339 @@ use Shopeca\XML\Generators\BaseItem;
  * Class Item
  * @author Martin Knor <martin.knor@gmail.com>
  * @package Mk\Feed\Generators\Google
+ * @property string $id
+ * @property string $title
+ * @property string $description
+ * @property string $googleProductCategory
+ * @property ProductType[] $productTypes
+ * @property string $link
+ * @property string $mobileLink
+ * @property Image[] $images
+ * @property string $condition
+ * @property string $availability
+ * @property \DateTime $availabilityDate
+ * @property string $price
+ * @property string $salePrice
+ * @property string $salePriceEffectiveDate
+ * @property int $gtin
+ * @property string $mpn
+ * @property string $brand
+ * @property bool $identifierExists
  */
-class Item extends BaseItem {
+class Item extends BaseItem
+{
 
-    CONST CONDITION_NEW = 'new',
-        CONDITION_REFURBISHED = 'refurbished',
-        CONDITION_USED = 'used',
-        
-        AVAILABILITY_PREORDER = 'preorder',
-        AVAILABILITY_IN_STOCK = 'in stock',
-        AVAILABILITY_OUT_OF_STOCK = 'out of stock';
+	CONST CONDITION_NEW = 'new';
+	CONST CONDITION_REFURBISHED = 'refurbished';
+	CONST CONDITION_USED = 'used';
 
-    static $conditions = array(
-        self::CONDITION_NEW,
-        self::CONDITION_REFURBISHED,
-        self::CONDITION_USED,
-    );
+	CONST AVAILABILITY_PREORDER = 'preorder';
+	CONST AVAILABILITY_IN_STOCK = 'in stock';
+	CONST AVAILABILITY_OUT_OF_STOCK = 'out of stock';
 
-    static $availabilities = array(
-        self::AVAILABILITY_PREORDER,
-        self::AVAILABILITY_IN_STOCK,
-        self::AVAILABILITY_OUT_OF_STOCK,
-    );
+	static $conditions = [
+		self::CONDITION_NEW,
+		self::CONDITION_REFURBISHED,
+		self::CONDITION_USED,
+	];
 
-    /** @var string @required */
-    protected $id;
+	static $availabilities = [
+		self::AVAILABILITY_PREORDER,
+		self::AVAILABILITY_IN_STOCK,
+		self::AVAILABILITY_OUT_OF_STOCK,
+	];
 
-    /** @var string @required */
-    protected $title;
+	/** @var string @required */
+	protected $id;
 
-    /** @var string @required */
-    protected $description;
+	/** @var string @required */
+	protected $title;
 
-    /** @var string|null */
-    protected $googleProductCategory;
+	/** @var string @required */
+	protected $description;
 
-    /** @var ProductType[] */
-    protected $productTypes = array();
+	/** @var string|null */
+	protected $googleProductCategory;
 
-    /**  @var string @required */
-    protected $link;
+	/** @var ProductType[] */
+	protected $productTypes = [];
 
-    /**  @var string|null */
-    protected $mobileLink;
+	/**  @var string @required */
+	protected $link;
 
-    /** @var Image[] */
-    protected $images = array();
+	/**  @var string|null */
+	protected $mobileLink;
 
-    /** @var string|null */
-    protected $condition = self::CONDITION_NEW;
+	/** @var Image[] */
+	protected $images = [];
 
-    /** @var string @required */
-    protected $availability = self::AVAILABILITY_IN_STOCK;
+	/** @var string|null */
+	protected $condition = self::CONDITION_NEW;
 
-    /** @var \DateTime|null */
-    protected $availabilityDate;
-    
-    /** @var string @required */
-    protected $price;
-    
-    /** @var string */
-    protected $salePrice;
-    
-    /** @var string */
-    protected $salePriceEffectiveDate;
-    
-    /** @var int */
-    protected $gtin;
-    
-    /** @var string */
-    protected $mpn;
-    
-    /** @var string */
-    protected $brand;
+	/** @var string @required */
+	protected $availability = self::AVAILABILITY_IN_STOCK;
 
-    /** @var bool */
-    protected $identifierExists;
+	/** @var \DateTime|null */
+	protected $availabilityDate;
 
-    /**
-     * @return string
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
+	/** @var string @required */
+	protected $price;
 
-    /**
-     * @param string $id
-     * @return Item
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
+	/** @var string */
+	protected $salePrice;
 
-        return $this;
-    }
+	/** @var string */
+	protected $salePriceEffectiveDate;
 
-    /**
-     * @return string
-     */
-    public function getTitle()
-    {
-        return $this->title;
-    }
+	/** @var int */
+	protected $gtin;
 
-    /**
-     * @param string $title
-     * @return Item
-     */
-    public function setTitle($title)
-    {
-        $this->title = $title;
+	/** @var string */
+	protected $mpn;
 
-        return $this;
-    }
+	/** @var string */
+	protected $brand;
 
-    /**
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
+	/** @var bool */
+	protected $identifierExists;
 
-    /**
-     * @param string $description
-     * @return Item
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
+	/**
+	 * @return string
+	 */
+	public function getId()
+	{
+		return $this->id;
+	}
 
-        return $this;
-    }
+	/**
+	 * @param string $id
+	 * @return self
+	 */
+	public function setId($id)
+	{
+		$this->id = $id;
 
-    /**
-     * @return null|string
-     */
-    public function getGoogleProductCategory()
-    {
-        return $this->googleProductCategory;
-    }
+		return $this;
+	}
 
-    /**
-     * @param null|string $googleProductCategory
-     * @return Item
-     */
-    public function setGoogleProductCategory($googleProductCategory)
-    {
-        $this->googleProductCategory = $googleProductCategory;
+	/**
+	 * @return string
+	 */
+	public function getTitle()
+	{
+		return $this->title;
+	}
 
-        return $this;
-    }
+	/**
+	 * @param string $title
+	 * @return self
+	 */
+	public function setTitle($title)
+	{
+		$this->title = $title;
 
-    /**
-     * @return string
-     */
-    public function getLink()
-    {
-        return $this->link;
-    }
+		return $this;
+	}
 
-    /**
-     * @param string $link
-     * @return Item
-     */
-    public function setLink($link)
-    {
-        $this->link = $link;
+	/**
+	 * @return string
+	 */
+	public function getDescription()
+	{
+		return $this->description;
+	}
 
-        return $this;
-    }
+	/**
+	 * @param string $description
+	 * @return self
+	 */
+	public function setDescription($description)
+	{
+		$this->description = $description;
 
-    /**
-     * @return null|string
-     */
-    public function getMobileLink()
-    {
-        return $this->mobileLink;
-    }
+		return $this;
+	}
 
-    /**
-     * @param null|string $mobileLink
-     * @return Item
-     */
-    public function setMobileLink($mobileLink)
-    {
-        $this->mobileLink = $mobileLink;
+	/**
+	 * @return null|string
+	 */
+	public function getGoogleProductCategory()
+	{
+		return $this->googleProductCategory;
+	}
 
-        return $this;
-    }
+	/**
+	 * @param null|string $googleProductCategory
+	 * @return self
+	 */
+	public function setGoogleProductCategory($googleProductCategory)
+	{
+		$this->googleProductCategory = $googleProductCategory;
 
-    /**
-     * @return string
-     */
-    public function getPrice()
-    {
-        return $this->price;
-    }
+		return $this;
+	}
 
-    /**
-     * @param string $price
-     * @return Item
-     */
-    public function setPrice($price)
-    {
-        $this->price = $price;
+	/**
+	 * @return string
+	 */
+	public function getLink()
+	{
+		return $this->link;
+	}
 
-        return $this;
-    }
+	/**
+	 * @param string $link
+	 * @return self
+	 */
+	public function setLink($link)
+	{
+		$this->link = $link;
 
-    /**
-     * @return string
-     */
-    public function getSalePrice()
-    {
-        return $this->salePrice;
-    }
+		return $this;
+	}
 
-    /**
-     * @param string $salePrice
-     * @return Item
-     */
-    public function setSalePrice($salePrice)
-    {
-        $this->salePrice = $salePrice;
+	/**
+	 * @return null|string
+	 */
+	public function getMobileLink()
+	{
+		return $this->mobileLink;
+	}
 
-        return $this;
-    }
+	/**
+	 * @param null|string $mobileLink
+	 * @return self
+	 */
+	public function setMobileLink($mobileLink)
+	{
+		$this->mobileLink = $mobileLink;
 
-    /**
-     * @return string
-     */
-    public function getSalePriceEffectiveDate()
-    {
-        return $this->salePriceEffectiveDate;
-    }
+		return $this;
+	}
 
-    /**
-     * @param string $salePriceEffectiveDate
-     * @return Item
-     */
-    public function setSalePriceEffectiveDate($salePriceEffectiveDate)
-    {
-        $this->salePriceEffectiveDate = $salePriceEffectiveDate;
+	/**
+	 * @return string
+	 */
+	public function getPrice()
+	{
+		return $this->price;
+	}
 
-        return $this;
-    }
+	/**
+	 * @param string $price
+	 * @return self
+	 */
+	public function setPrice($price)
+	{
+		$this->price = $price;
 
-    /**
-     * @return int
-     */
-    public function getGtin()
-    {
-        return $this->gtin;
-    }
+		return $this;
+	}
 
-    /**
-     * @param int $gtin
-     * @return Item
-     */
-    public function setGtin($gtin)
-    {
-        $this->gtin = $gtin;
+	/**
+	 * @return string
+	 */
+	public function getSalePrice()
+	{
+		return $this->salePrice;
+	}
 
-        return $this;
-    }
+	/**
+	 * @param string $salePrice
+	 * @return self
+	 */
+	public function setSalePrice($salePrice)
+	{
+		$this->salePrice = $salePrice;
 
-    /**
-     * @return string
-     */
-    public function getMpn()
-    {
-        return $this->mpn;
-    }
+		return $this;
+	}
 
-    /**
-     * @param string $mpn
-     * @return Item
-     */
-    public function setMpn($mpn)
-    {
-        $this->mpn = $mpn;
+	/**
+	 * @return string
+	 */
+	public function getSalePriceEffectiveDate()
+	{
+		return $this->salePriceEffectiveDate;
+	}
 
-        return $this;
-    }
+	/**
+	 * @param string $salePriceEffectiveDate
+	 * @return self
+	 */
+	public function setSalePriceEffectiveDate($salePriceEffectiveDate)
+	{
+		$this->salePriceEffectiveDate = $salePriceEffectiveDate;
 
-    /**
-     * @return string
-     */
-    public function getBrand()
-    {
-        return $this->brand;
-    }
+		return $this;
+	}
 
-    /**
-     * @param string $brand
-     * @return Item
-     */
-    public function setBrand($brand)
-    {
-        $this->brand = $brand;
+	/**
+	 * @return int
+	 */
+	public function getGtin()
+	{
+		return $this->gtin;
+	}
 
-        return $this;
-    }
+	/**
+	 * @param int $gtin
+	 * @return self
+	 */
+	public function setGtin($gtin)
+	{
+		$this->gtin = $gtin;
 
-    /**
-     * @return boolean
-     */
-    public function isIdentifierExists()
-    {
-        return $this->identifierExists !== null ? $this->identifierExists : $this->checkIdentifierExistence();
-    }
+		return $this;
+	}
 
-	public function checkIdentifierExistence ()
+	/**
+	 * @return string
+	 */
+	public function getMpn()
+	{
+		return $this->mpn;
+	}
+
+	/**
+	 * @param string $mpn
+	 * @return self
+	 */
+	public function setMpn($mpn)
+	{
+		$this->mpn = $mpn;
+
+		return $this;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getBrand()
+	{
+		return $this->brand;
+	}
+
+	/**
+	 * @param string $brand
+	 * @return self
+	 */
+	public function setBrand($brand)
+	{
+		$this->brand = $brand;
+
+		return $this;
+	}
+
+	/**
+	 * @return boolean
+	 */
+	public function isIdentifierExists()
+	{
+		return $this->identifierExists !== null ? $this->identifierExists : $this->checkIdentifierExistence();
+	}
+
+	public function checkIdentifierExistence()
 	{
 		$identifierCount = 0;
 		if ($this->brand != null) {
@@ -334,113 +354,113 @@ class Item extends BaseItem {
 		}
 		return $identifierCount > 1;
 	}
-    
-    /**
-     * @param boolean $identifierExists
-     * @return Item
-     */
-    public function setIdentifierExists($identifierExists)
-    {
-        $this->identifierExists = $identifierExists;
 
-        return $this;
-    }
+	/**
+	 * @param boolean $identifierExists
+	 * @return self
+	 */
+	public function setIdentifierExists($identifierExists)
+	{
+		$this->identifierExists = $identifierExists;
 
-    /**
-     * @return \DateTime|null
-     */
-    public function getAvailabilityDate()
-    {
-        return $this->availabilityDate instanceof \DateTime ? $this->availabilityDate->format('c') : $this->availabilityDate;
-    }
+		return $this;
+	}
 
-    /**
-     * @param \DateTime|null $availabilityDate
-     * @return Item
-     */
-    public function setAvailabilityDate(\DateTime $availabilityDate = null)
-    {
-        $this->availabilityDate = $availabilityDate;
+	/**
+	 * @return \DateTime|null
+	 */
+	public function getAvailabilityDate()
+	{
+		return $this->availabilityDate instanceof \DateTime ? $this->availabilityDate->format('c') : $this->availabilityDate;
+	}
 
-        return $this;
-    }
+	/**
+	 * @param \DateTime|null $availabilityDate
+	 * @return self
+	 */
+	public function setAvailabilityDate(\DateTime $availabilityDate = null)
+	{
+		$this->availabilityDate = $availabilityDate;
 
-    /**
-     * @return float
-     */
-    public function getAvailability()
-    {
-        return $this->availability;
-    }
+		return $this;
+	}
 
-    /**
-     * @param float $availability
-     * @return Item
-     */
-    public function setAvailability($availability)
-    {
-        if (!in_array($availability, self::$availabilities)) {
-            throw new \InvalidArgumentException("Availability with id $availability doesn\t exist");
-        }
-        $this->availability = $availability;
+	/**
+	 * @return float
+	 */
+	public function getAvailability()
+	{
+		return $this->availability;
+	}
 
-        return $this;
-    }
+	/**
+	 * @param float $availability
+	 * @return self
+	 */
+	public function setAvailability($availability)
+	{
+		if (!in_array($availability, self::$availabilities)) {
+			throw new \InvalidArgumentException("Availability with id $availability doesn\t exist");
+		}
+		$this->availability = $availability;
 
-    /**
-     * @param $url
-     * @return $this
-     */
-    public function addImage($url)
-    {
-        $this->images[] = new Image($url);
+		return $this;
+	}
 
-        return $this;
-    }
+	/**
+	 * @param $url
+	 * @return $this
+	 */
+	public function addImage($url)
+	{
+		$this->images[] = new Image($url);
 
-    public function addProductType($text)
-    {
-        $this->productTypes[] = new ProductType($text);
+		return $this;
+	}
 
-        return $this;
-    }
+	public function addProductType($text)
+	{
+		$this->productTypes[] = new ProductType($text);
 
-    /**
-     * @return ProductType[]
-     */
-    public function getProductTypes()
-    {
-        return $this->productTypes;
-    }
+		return $this;
+	}
 
-    /**
-     * @return null|string
-     */
-    public function getCondition()
-    {
-        return $this->condition;
-    }
+	/**
+	 * @return ProductType[]
+	 */
+	public function getProductTypes()
+	{
+		return $this->productTypes;
+	}
 
-    /**
-     * @param null|string $condition
-     * @return Item
-     */
-    public function setCondition($condition)
-    {
-        if (!in_array($condition, self::$conditions)) {
-            throw new \InvalidArgumentException("Condition with id $condition doesn\t exist");
-        }
-        $this->condition = $condition;
+	/**
+	 * @return null|string
+	 */
+	public function getCondition()
+	{
+		return $this->condition;
+	}
 
-        return $this;
-    }
+	/**
+	 * @param null|string $condition
+	 * @return self
+	 */
+	public function setCondition($condition)
+	{
+		if (!in_array($condition, self::$conditions)) {
+			throw new \InvalidArgumentException("Condition with id $condition doesn\t exist");
+		}
+		$this->condition = $condition;
 
-    /**
-     * @return Image[]
-     */
-    public function getImages()
-    {
-        return $this->images;
-    }
+		return $this;
+	}
+
+	/**
+	 * @return Image[]
+	 */
+	public function getImages()
+	{
+		return $this->images;
+	}
 
 }

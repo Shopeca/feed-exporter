@@ -2,35 +2,39 @@
 
 namespace Shopeca\XML\Feed\Zbozi;
 
-use Nette\Object;
+use Nette\SmartObject;
 
 /**
  * Class ExtraMessage
  * @author Martin Knor <martin.knor@gmail.com>
  * @package Mk\Feed\Generators\Zbozi
+ *
+ * @property string $text
  */
-class CategoryText extends Object {
-   
+class CategoryText
+{
 
-    /** @var string */
-    protected $text;
+	use SmartObject;
 
-    /**
-     * ExtraMessage constructor.
-     * @param $text
-     */
-    public function __construct($text)
-    {
-       
-        $this->text = (string)$text;
-    }
+	/** @var string */
+	protected $text;
 
-    /**
-     * @return string
-     */
-    public function getText()
-    {
-        return $this->text;
-    }
+	/**
+	 * ExtraMessage constructor.
+	 * @param $text
+	 */
+	public function __construct($text)
+	{
+
+		$this->text = (string)$text;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getText()
+	{
+		return $this->text;
+	}
 
 }

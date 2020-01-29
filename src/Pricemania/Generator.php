@@ -1,4 +1,5 @@
 <?php
+
 namespace Shopeca\XML\Feed\Pricemania;
 
 use Shopeca\XML\Feed\FeedGenerator;
@@ -9,7 +10,8 @@ use Shopeca\XML\Feed\FeedGenerator;
  * @package Mk\Feed\Generators
  * @see www.hledejceny.cz/napoveda/pro-internetove-obchody/ Documentation
  */
-class Generator extends FeedGenerator {
+class Generator extends FeedGenerator
+{
 
 	protected function getTemplate($name)
 	{

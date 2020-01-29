@@ -1,4 +1,5 @@
 <?php
+
 namespace Shopeca\XML\Feed\Heureka;
 
 use Shopeca\XML\Feed\FeedGenerator;
@@ -9,7 +10,8 @@ use Shopeca\XML\Feed\FeedGenerator;
  * @package Mk\Feed\Generators
  * @see http://sluzby.heureka.cz/napoveda/xml-feed/ Documentation
  */
-class Generator extends FeedGenerator {
+class Generator extends FeedGenerator
+{
 
 	protected function getTemplate($name)
 	{

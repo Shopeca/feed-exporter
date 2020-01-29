@@ -1,34 +1,40 @@
 <?php
+
 namespace Shopeca\XML\Feed\Heureka;
 
-use Nette\Object;
+use Nette\SmartObject;
 
 /**
  * Class Gift
  * @author Martin Knor <martin.knor@gmail.com>
  * @package Mk\Feed\Generators\Heureka
+ *
+ * @property string $name
  */
-class Gift extends Object {
+class Gift
+{
 
-    /** @var string */
-    protected $name;
+	use SmartObject;
 
-    /**
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
+	/** @var string */
+	protected $name;
 
-    /**
-     * Gift constructor.
-     * @param $name
-     */
-    public function __construct($name)
-    {
+	/**
+	 * @return string
+	 */
+	public function getName()
+	{
+		return $this->name;
+	}
 
-        $this->name = (string)$name;
-    }
+	/**
+	 * Gift constructor.
+	 * @param $name
+	 */
+	public function __construct($name)
+	{
+
+		$this->name = (string)$name;
+	}
 
 }

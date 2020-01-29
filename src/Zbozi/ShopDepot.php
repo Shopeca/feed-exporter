@@ -2,23 +2,32 @@
 
 namespace Shopeca\XML\Feed\Zbozi;
 
-use Nette\Object;
+use Nette\SmartObject;
 
-class ShopDepot extends Object {
+/**
+ * Class ShopDepot
+ * @package Shopeca\XML\Feed\Zbozi
+ *
+ * @property string $id
+ */
+class ShopDepot
+{
 
-    private $id;
+	use SmartObject;
 
-    public function __construct($id)
-    {
-        $this->id = $id;
-    }
+	private $id;
 
-    /**
-     * @return mixed
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
+	public function __construct($id)
+	{
+		$this->id = $id;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getId()
+	{
+		return $this->id;
+	}
 
 }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SHOP>
+  <SHOPITEM>
+    <PRODUCT>Autíčko</PRODUCT>
+    <URL>http://eshop.cz/auticko</URL>
+    <DESCRIPTION>&lt;p&gt;Jezdí jako ďas&lt;/p&gt;</DESCRIPTION>
+    <PRICE_VAT>250</PRICE_VAT>
+    <IMGURL>http://eshop.cz/auticko.jpg</IMGURL>
+    <PRICE_VAT>250</PRICE_VAT>
+    <DELIVERY_DATE>0</DELIVERY_DATE>
+    <MANUFACTURER>Matel</MANUFACTURER>
+    <CATEGORYTEXT>Hračky</CATEGORYTEXT>
+    <DELIVERY_COST>100</DELIVERY_COST>
+    <ID>1</ID>
+    <EAN>00012123456</EAN>
+    <PRODUCT_NO>kniha0003</PRODUCT_NO>
+    <WARRANTY>5 let</WARRANTY>
+    <DUES>4.5</DUES>
+    <TOLL>660</TOLL>
+    <PARAM>
+      <PARAM_NAME>barva</PARAM_NAME>
+      <VAL>red</VAL>
+    </PARAM>
+  </SHOPITEM>
+</SHOP>

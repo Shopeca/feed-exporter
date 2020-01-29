@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:g="http://base.google.com/ns/1.0">
+  <entry>
+    <g:id>1</g:id>
+    <g:title>Autíčko</g:title>
+    <g:description>&lt;p&gt;Jezdí jako ďas&lt;/p&gt;</g:description>
+    <g:link>http://eshop.cz/auticko</g:link>
+    <g:mobile_link>http://eshop.cz/auticko?mobile=true</g:mobile_link>
+    <g:image_link>http://eshop.cz/auticko.jpg</g:image_link>
+    <g:additional_image_link>http://eshop.cz/galerie/auticko.jpg</g:additional_image_link>
+    <g:condition>new</g:condition>
+    <g:availability_date>2020-06-01T19:00:00+00:00</g:availability_date>
+    <g:price>250</g:price>
+    <g:sale_price>200</g:sale_price>
+    <g:sale_price_effective_dat>2020-06-01</g:sale_price_effective_dat>
+    <g:gtin>120</g:gtin>
+    <g:brand>Matel</g:brand>
+    <g:mpn>111000</g:mpn>
+    <g:identifier_exists>FALSE</g:identifier_exists>
+    <g:product_type>Hračka</g:product_type>
+    <g:google_product_category>Hračka</g:google_product_category>
+  </entry>
+</feed>

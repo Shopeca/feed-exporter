@@ -1,4 +1,5 @@
 <?php
+
 namespace Shopeca\XML\Feed\Pricemania;
 
 use Shopeca\XML\Generators\BaseItem;
@@ -8,8 +9,23 @@ use Shopeca\XML\Generators\BaseItem;
  * @author Tom Hnatovsky <tom@hnatovsky.cz>
  * @package Mk\Feed\Generators\Pricemania
  * @see http://www.hledejceny.cz/data/obchody/moznosti_optimalizace_na_HLEDEJCENY.cz.pdf Documentation
+ *
+ * @property string $name
+ * @property string $description
+ * @property float $price
+ * @property string $category
+ * @property string $manufacturer
+ * @property string $url
+ * @property string $picture
+ * @property float $shipping
+ * @property int $availability
+ * @property string $id
+ * @property string $ean
+ * @property string $partNumber
+ * @property Parameter[] $parameters
  */
-class Item extends BaseItem {
+class Item extends BaseItem
+{
 
 	/** @var string @required */
 	protected $name;
@@ -45,7 +61,7 @@ class Item extends BaseItem {
 	protected $ean;
 
 	/** @var string|null */
-	protected $part_number;
+	protected $partNumber;
 
 	/** @var Parameter[] */
 	protected $parameters = array();
@@ -53,7 +69,8 @@ class Item extends BaseItem {
 	/**
 	 * @return string
 	 */
-	public function getName () {
+	public function getName()
+	{
 		return $this->name;
 	}
 
@@ -61,7 +78,8 @@ class Item extends BaseItem {
 	 * @param string $name
 	 * @return Item
 	 */
-	public function setName ( $name ) {
+	public function setName($name)
+	{
 		$this->name = $name;
 		return $this;
 	}
@@ -69,7 +87,8 @@ class Item extends BaseItem {
 	/**
 	 * @return string
 	 */
-	public function getDescription () {
+	public function getDescription()
+	{
 		return $this->description;
 	}
 
@@ -77,7 +96,8 @@ class Item extends BaseItem {
 	 * @param string $description
 	 * @return Item
 	 */
-	public function setDescription ( $description ) {
+	public function setDescription($description)
+	{
 		$this->description = $description;
 		return $this;
 	}
@@ -85,7 +105,8 @@ class Item extends BaseItem {
 	/**
 	 * @return float
 	 */
-	public function getPrice () {
+	public function getPrice()
+	{
 		return $this->price;
 	}
 
@@ -93,7 +114,8 @@ class Item extends BaseItem {
 	 * @param float $price
 	 * @return Item
 	 */
-	public function setPrice ( $price ) {
+	public function setPrice($price)
+	{
 		$this->price = $price;
 		return $this;
 	}
@@ -101,7 +123,8 @@ class Item extends BaseItem {
 	/**
 	 * @return string
 	 */
-	public function getCategory () {
+	public function getCategory()
+	{
 		return $this->category;
 	}
 
@@ -109,7 +132,8 @@ class Item extends BaseItem {
 	 * @param string $category
 	 * @return Item
 	 */
-	public function setCategory ( $category ) {
+	public function setCategory($category)
+	{
 		$this->category = $category;
 		return $this;
 	}
@@ -117,7 +141,8 @@ class Item extends BaseItem {
 	/**
 	 * @return string
 	 */
-	public function getManufacturer () {
+	public function getManufacturer()
+	{
 		return $this->manufacturer;
 	}
 
@@ -125,7 +150,8 @@ class Item extends BaseItem {
 	 * @param string $manufacturer
 	 * @return Item
 	 */
-	public function setManufacturer ( $manufacturer ) {
+	public function setManufacturer($manufacturer)
+	{
 		$this->manufacturer = $manufacturer;
 		return $this;
 	}
@@ -133,7 +159,8 @@ class Item extends BaseItem {
 	/**
 	 * @return string
 	 */
-	public function getUrl () {
+	public function getUrl()
+	{
 		return $this->url;
 	}
 
@@ -141,7 +168,8 @@ class Item extends BaseItem {
 	 * @param string $url
 	 * @return Item
 	 */
-	public function setUrl ( $url ) {
+	public function setUrl($url)
+	{
 		$this->url = $url;
 		return $this;
 	}
@@ -149,7 +177,8 @@ class Item extends BaseItem {
 	/**
 	 * @return string
 	 */
-	public function getPicture () {
+	public function getPicture()
+	{
 		return $this->picture;
 	}
 
@@ -157,7 +186,8 @@ class Item extends BaseItem {
 	 * @param string $picture
 	 * @return Item
 	 */
-	public function setPicture ( $picture ) {
+	public function setPicture($picture)
+	{
 		$this->picture = $picture;
 		return $this;
 	}
@@ -165,7 +195,8 @@ class Item extends BaseItem {
 	/**
 	 * @return float
 	 */
-	public function getShipping () {
+	public function getShipping()
+	{
 		return $this->shipping;
 	}
 
@@ -173,7 +204,8 @@ class Item extends BaseItem {
 	 * @param float $shipping
 	 * @return Item
 	 */
-	public function setShipping ( $shipping ) {
+	public function setShipping($shipping)
+	{
 		$this->shipping = (float)$shipping;
 		return $this;
 	}
@@ -181,7 +213,8 @@ class Item extends BaseItem {
 	/**
 	 * @return int
 	 */
-	public function getAvailability () {
+	public function getAvailability()
+	{
 		return $this->availability;
 	}
 
@@ -189,7 +222,8 @@ class Item extends BaseItem {
 	 * @param int $availability
 	 * @return Item
 	 */
-	public function setAvailability ( $availability ) {
+	public function setAvailability($availability)
+	{
 		$this->availability = (int)$availability;
 		return $this;
 	}
@@ -197,7 +231,8 @@ class Item extends BaseItem {
 	/**
 	 * @return null|string
 	 */
-	public function getId () {
+	public function getId()
+	{
 		return $this->id;
 	}
 
@@ -205,7 +240,8 @@ class Item extends BaseItem {
 	 * @param null|string $id
 	 * @return Item
 	 */
-	public function setId ( $id ) {
+	public function setId($id)
+	{
 		$this->id = $id;
 		return $this;
 	}
@@ -213,7 +249,8 @@ class Item extends BaseItem {
 	/**
 	 * @return null|string
 	 */
-	public function getEan () {
+	public function getEan()
+	{
 		return $this->ean;
 	}
 
@@ -221,7 +258,8 @@ class Item extends BaseItem {
 	 * @param null|string $ean
 	 * @return Item
 	 */
-	public function setEan ( $ean ) {
+	public function setEan($ean)
+	{
 		$this->ean = $ean;
 		return $this;
 	}
@@ -229,23 +267,26 @@ class Item extends BaseItem {
 	/**
 	 * @return null|string
 	 */
-	public function getPartNumber () {
-		return $this->part_number;
+	public function getPartNumber()
+	{
+		return $this->partNumber;
 	}
 
 	/**
-	 * @param null|string $part_number
+	 * @param null|string $partNumber
 	 * @return Item
 	 */
-	public function setPartNumber ( $part_number ) {
-		$this->part_number = $part_number;
+	public function setPartNumber($partNumber)
+	{
+		$this->partNumber = $partNumber;
 		return $this;
 	}
 
 	/**
 	 * @return Parameter[]
 	 */
-	public function getParameters () {
+	public function getParameters()
+	{
 		return $this->parameters;
 	}
 
@@ -254,7 +295,7 @@ class Item extends BaseItem {
 	 * @param $val
 	 * @return Item
 	 */
-	public function addParameter ($name, $val)
+	public function addParameter($name, $val)
 	{
 		$this->parameters[] = new Parameter($name, $val);
 

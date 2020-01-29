@@ -7,8 +7,28 @@ use Shopeca\XML\Generators\BaseItem;
  * Class Item
  * @author Tom Hnatovsky <tom@hnatovsky.cz>
  * @see https://www.glami.cz/info/feed/ Documentation
+ *
+ *  @property string $itemId
+ *  @property string $itemGroupId
+ *  @property string $productName
+ *  @property string $description
+ *  @property string $url
+ *  @property string $imgUrl
+ *  @property float $priceVat
+ *  @property string $manufacturer
+ *  @property string $categoryText
+ *  @property string $categoryId
+ *  @property int $deliveryDate
+ *  @property string $urlSize
+ *  @property array $imgUrlAlternative
+ *  @property string $ean
+ *  @property string $glamiCpc
+ *  @property string $promotionId
+ *  @property Parameter[] $parameters
+ *  @property Delivery[] $deliveries
  */
-class Item extends BaseItem {
+class Item extends BaseItem
+{
 
 	/** @var string @required */
 	protected $itemId;
@@ -67,7 +87,8 @@ class Item extends BaseItem {
 	/**
 	 * @return string
 	 */
-	public function getItemId () {
+	public function getItemId()
+	{
 		return $this->itemId;
 	}
 
@@ -75,7 +96,8 @@ class Item extends BaseItem {
 	 * @param string $itemId
 	 * @return Item
 	 */
-	public function setItemId ($itemId) {
+	public function setItemId($itemId)
+	{
 		$this->itemId = $itemId;
 		return $this;
 	}
@@ -83,7 +105,8 @@ class Item extends BaseItem {
 	/**
 	 * @return string
 	 */
-	public function getItemGroupId () {
+	public function getItemGroupId()
+	{
 		return $this->itemGroupId;
 	}
 
@@ -91,7 +114,8 @@ class Item extends BaseItem {
 	 * @param string $itemGroupId
 	 * @return Item
 	 */
-	public function setItemGroupId ($itemGroupId) {
+	public function setItemGroupId($itemGroupId)
+	{
 		$this->itemGroupId = $itemGroupId;
 		return $this;
 	}
@@ -99,7 +123,8 @@ class Item extends BaseItem {
 	/**
 	 * @return string
 	 */
-	public function getProductName () {
+	public function getProductName()
+	{
 		return $this->productName;
 	}
 
@@ -107,7 +132,8 @@ class Item extends BaseItem {
 	 * @param string $productName
 	 * @return Item
 	 */
-	public function setProductName ($productName) {
+	public function setProductName($productName)
+	{
 		$this->productName = $productName;
 		return $this;
 	}
@@ -115,7 +141,8 @@ class Item extends BaseItem {
 	/**
 	 * @return string
 	 */
-	public function getDescription () {
+	public function getDescription()
+	{
 		return $this->description;
 	}
 
@@ -123,7 +150,8 @@ class Item extends BaseItem {
 	 * @param string $description
 	 * @return Item
 	 */
-	public function setDescription ($description) {
+	public function setDescription($description)
+	{
 		$this->description = $description;
 		return $this;
 	}
@@ -131,7 +159,8 @@ class Item extends BaseItem {
 	/**
 	 * @return string
 	 */
-	public function getUrl () {
+	public function getUrl()
+	{
 		return $this->url;
 	}
 
@@ -139,7 +168,8 @@ class Item extends BaseItem {
 	 * @param string $url
 	 * @return Item
 	 */
-	public function setUrl ($url) {
+	public function setUrl($url)
+	{
 		$this->url = $url;
 		return $this;
 	}
@@ -147,7 +177,8 @@ class Item extends BaseItem {
 	/**
 	 * @return string
 	 */
-	public function getImgUrl () {
+	public function getImgUrl()
+	{
 		return $this->imgUrl;
 	}
 
@@ -155,7 +186,8 @@ class Item extends BaseItem {
 	 * @param string $imgUrl
 	 * @return Item
 	 */
-	public function setImgUrl ($imgUrl) {
+	public function setImgUrl($imgUrl)
+	{
 		$this->imgUrl = $imgUrl;
 		return $this;
 	}
@@ -163,7 +195,8 @@ class Item extends BaseItem {
 	/**
 	 * @return float
 	 */
-	public function getPriceVat () {
+	public function getPriceVat()
+	{
 		return $this->priceVat;
 	}
 
@@ -171,7 +204,8 @@ class Item extends BaseItem {
 	 * @param float $priceVat
 	 * @return Item
 	 */
-	public function setPriceVat ($priceVat) {
+	public function setPriceVat($priceVat)
+	{
 		$this->priceVat = $priceVat;
 		return $this;
 	}
@@ -179,7 +213,8 @@ class Item extends BaseItem {
 	/**
 	 * @return string
 	 */
-	public function getManufacturer () {
+	public function getManufacturer()
+	{
 		return $this->manufacturer;
 	}
 
@@ -187,7 +222,8 @@ class Item extends BaseItem {
 	 * @param string $manufacturer
 	 * @return Item
 	 */
-	public function setManufacturer ($manufacturer) {
+	public function setManufacturer($manufacturer)
+	{
 		$this->manufacturer = $manufacturer;
 		return $this;
 	}
@@ -195,7 +231,8 @@ class Item extends BaseItem {
 	/**
 	 * @return string
 	 */
-	public function getCategoryText () {
+	public function getCategoryText()
+	{
 		return $this->categoryText;
 	}
 
@@ -203,7 +240,8 @@ class Item extends BaseItem {
 	 * @param string $categoryText
 	 * @return Item
 	 */
-	public function setCategoryText ($categoryText) {
+	public function setCategoryText($categoryText)
+	{
 		$this->categoryText = $categoryText;
 		return $this;
 	}
@@ -211,7 +249,8 @@ class Item extends BaseItem {
 	/**
 	 * @return string
 	 */
-	public function getCategoryId () {
+	public function getCategoryId()
+	{
 		return $this->categoryId;
 	}
 
@@ -219,7 +258,8 @@ class Item extends BaseItem {
 	 * @param string $categoryId
 	 * @return Item
 	 */
-	public function setCategoryId ($categoryId) {
+	public function setCategoryId($categoryId)
+	{
 		$this->categoryId = $categoryId;
 		return $this;
 	}
@@ -227,7 +267,8 @@ class Item extends BaseItem {
 	/**
 	 * @return int
 	 */
-	public function getDeliveryDate () {
+	public function getDeliveryDate()
+	{
 		return $this->deliveryDate;
 	}
 
@@ -235,7 +276,8 @@ class Item extends BaseItem {
 	 * @param int $deliveryDate
 	 * @return Item
 	 */
-	public function setDeliveryDate ($deliveryDate) {
+	public function setDeliveryDate($deliveryDate)
+	{
 		$this->deliveryDate = $deliveryDate;
 		return $this;
 	}
@@ -243,7 +285,8 @@ class Item extends BaseItem {
 	/**
 	 * @return string
 	 */
-	public function getUrlSize () {
+	public function getUrlSize()
+	{
 		return $this->urlSize;
 	}
 
@@ -251,7 +294,8 @@ class Item extends BaseItem {
 	 * @param string $urlSize
 	 * @return Item
 	 */
-	public function setUrlSize ($urlSize) {
+	public function setUrlSize($urlSize)
+	{
 		$this->urlSize = $urlSize;
 		return $this;
 	}
@@ -259,7 +303,8 @@ class Item extends BaseItem {
 	/**
 	 * @return array
 	 */
-	public function getImgUrlAlternative () {
+	public function getImgUrlAlternative()
+	{
 		return $this->imgUrlAlternative;
 	}
 
@@ -267,7 +312,8 @@ class Item extends BaseItem {
 	 * @param string
 	 * @return Item
 	 */
-	public function addAlternativeImage ($url) {
+	public function addAlternativeImage($url)
+	{
 		$this->imgUrlAlternative[] = $url;
 		return $this;
 	}
@@ -275,7 +321,8 @@ class Item extends BaseItem {
 	/**
 	 * @return null|string
 	 */
-	public function getEan () {
+	public function getEan()
+	{
 		return $this->ean;
 	}
 
@@ -283,7 +330,8 @@ class Item extends BaseItem {
 	 * @param null|string $ean
 	 * @return Item
 	 */
-	public function setEan ($ean) {
+	public function setEan($ean)
+	{
 		$this->ean = $ean;
 		return $this;
 	}
@@ -291,7 +339,8 @@ class Item extends BaseItem {
 	/**
 	 * @return null|string
 	 */
-	public function getGlamiCpc () {
+	public function getGlamiCpc()
+	{
 		return $this->glamiCpc;
 	}
 
@@ -299,7 +348,8 @@ class Item extends BaseItem {
 	 * @param null|string $glamiCpc
 	 * @return Item
 	 */
-	public function setGlamiCpc ($glamiCpc) {
+	public function setGlamiCpc($glamiCpc)
+	{
 		$this->glamiCpc = $glamiCpc;
 		return $this;
 	}
@@ -307,7 +357,8 @@ class Item extends BaseItem {
 	/**
 	 * @return null|string
 	 */
-	public function getPromotionId () {
+	public function getPromotionId()
+	{
 		return $this->promotionId;
 	}
 
@@ -315,7 +366,8 @@ class Item extends BaseItem {
 	 * @param null|string $promotionId
 	 * @return Item
 	 */
-	public function setPromotionId ($promotionId) {
+	public function setPromotionId($promotionId)
+	{
 		$this->promotionId = $promotionId;
 		return $this;
 	}
@@ -323,7 +375,8 @@ class Item extends BaseItem {
 	/**
 	 * @return Parameter[]
 	 */
-	public function getParameters () {
+	public function getParameters()
+	{
 		return $this->parameters;
 	}
 
@@ -332,7 +385,8 @@ class Item extends BaseItem {
 	 * @param $val
 	 * @return Item
 	 */
-	public function addParameters ($name, $val) {
+	public function addParameters($name, $val)
+	{
 		$this->parameters[] = new Parameter($name, $val);
 		return $this;
 	}
@@ -340,7 +394,8 @@ class Item extends BaseItem {
 	/**
 	 * @return Delivery[]
 	 */
-	public function getDeliveries () {
+	public function getDeliveries()
+	{
 		return $this->deliveries;
 	}
 
@@ -350,7 +405,8 @@ class Item extends BaseItem {
 	 * @param $priceCod
 	 * @return Item
 	 */
-	public function addDelivery ($name, $price, $priceCod) {
+	public function addDelivery($name, $price, $priceCod)
+	{
 		$this->deliveries[] = new Delivery($name, $price, $priceCod);
 		return $this;
 	}

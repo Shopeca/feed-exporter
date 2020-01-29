@@ -1,4 +1,5 @@
 <?php
+
 namespace Shopeca\XML\Feed\Heureka;
 
 use Shopeca\XML\Generators\BaseParameter;
@@ -8,6 +9,7 @@ use Shopeca\XML\Generators\BaseParameter;
  * @author Martin Knor <martin.knor@gmail.com>
  * @package Mk\Feed\Generators\Heureka
  */
-class Parameter extends BaseParameter {
-	
+class Parameter extends BaseParameter
+{
+
 }
