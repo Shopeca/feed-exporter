@@ -57,7 +57,7 @@ class Item extends BaseItem
 	/** @var string @required */
 	protected $categoryText;
 
-	/** @var string @required */
+	/** @var string */
 	protected $categoryId;
 
 	/** @var int @required */
