@@ -29,4 +29,15 @@
     {/if}
 
     <g:google_product_category n:if="$item->googleProductCategory">{$item->googleProductCategory}</g:google_product_category>
+
+    {if !empty($shipping = $item->shipping)}
+        {foreach $shipping as $shippingItem}
+            <g:shipping>
+	            <g:country n:if="$shippingItem->country">{$shippingItem->country}</g:country>
+	            <g:region n:if="$shippingItem->region">{$shippingItem->region}</g:region>
+	            <g:service>{$shippingItem->service}</g:service>
+	            <g:price>{$shippingItem->price}</g:price>
+            </g:shipping>
+        {/foreach}
+    {/if}
 </entry>

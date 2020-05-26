@@ -19,5 +19,15 @@
     <g:identifier_exists>FALSE</g:identifier_exists>
     <g:product_type>Hračka</g:product_type>
     <g:google_product_category>Hračka</g:google_product_category>
+    <g:shipping>
+      <g:service>PPL</g:service>
+      <g:price>250</g:price>
+    </g:shipping>
+    <g:shipping>
+      <g:country>US</g:country>
+      <g:region>MA</g:region>
+      <g:service>DHL</g:service>
+      <g:price>100</g:price>
+    </g:shipping>
   </entry>
 </feed>

@@ -26,6 +26,7 @@ use Shopeca\XML\Generators\BaseItem;
  * @property string $mpn
  * @property string $brand
  * @property bool $identifierExists
+ * @property Shipping[] $shipping
  */
 class Item extends BaseItem
 {
@@ -103,6 +104,9 @@ class Item extends BaseItem
 
 	/** @var bool */
 	protected $identifierExists;
+
+	/** @var Shipping[] */
+	protected $shipping = [];
 
 	/**
 	 * @return string
@@ -461,6 +465,25 @@ class Item extends BaseItem
 	public function getImages()
 	{
 		return $this->images;
+	}
+
+	/**
+	 * @param Shipping $shipping
+	 * @return self
+	 */
+	public function addShipping(Shipping $shipping)
+	{
+		$this->shipping[] = $shipping;
+
+		return $this;
+	}
+
+	/**
+	 * @return Shipping[]
+	 */
+	public function getShipping()
+	{
+		return $this->shipping;
 	}
 
 }

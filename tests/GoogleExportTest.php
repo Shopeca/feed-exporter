@@ -5,6 +5,7 @@ namespace Tests\Utils;
 use PHPUnit\Framework\TestCase;
 use Shopeca\XML\Feed\Google\Generator;
 use Shopeca\XML\Feed\Google\Item;
+use Shopeca\XML\Feed\Google\Shipping;
 use Shopeca\XML\Storage;
 
 class GoogleExportTest extends TestCase
@@ -35,7 +36,9 @@ class GoogleExportTest extends TestCase
 			->setGtin(120)
 			->setMpn('111000')
 			->setBrand('Matel')
-			->setIdentifierExists(false);
+			->setIdentifierExists(false)
+			->addShipping(new Shipping('PPL', 250))
+			->addShipping($this->getUsShipping());
 
 		$generator = new Generator(new Storage(__DIR__.'/../temp'));
 
@@ -48,6 +51,15 @@ class GoogleExportTest extends TestCase
 
 		$this->assertFileExists($filePath);
 		$this->assertXmlFileEqualsXmlFile(__DIR__.'/xml/'.$fileName, $filePath);
+	}
+
+	private function getUsShipping(): Shipping
+	{
+		$shipping = new Shipping('DHL', 100);
+		$shipping
+			->setCountry('US')
+			->setRegion('MA');
+		return $shipping;
 	}
 
 	public function testIncompleteItem(): void
