@@ -36,8 +36,9 @@ class Item extends BaseItem
 	CONST CONDITION_USED = 'used';
 
 	CONST AVAILABILITY_PREORDER = 'preorder';
-	CONST AVAILABILITY_IN_STOCK = 'in stock';
-	CONST AVAILABILITY_OUT_OF_STOCK = 'out of stock';
+	CONST AVAILABILITY_IN_STOCK = 'in_stock';
+	CONST AVAILABILITY_OUT_OF_STOCK = 'out_of_stock';
+	CONST AVAILABILITY_BACKORDER = 'backorder';
 
 	static $conditions = [
 		self::CONDITION_NEW,
@@ -49,6 +50,7 @@ class Item extends BaseItem
 		self::AVAILABILITY_PREORDER,
 		self::AVAILABILITY_IN_STOCK,
 		self::AVAILABILITY_OUT_OF_STOCK,
+		self::AVAILABILITY_BACKORDER,
 	];
 
 	/** @var string @required */
